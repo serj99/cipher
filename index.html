@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cipher</title>
+    <title>Cifruri</title>
     <script type="module" src="main.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
@@ -13,7 +13,7 @@
             color: white;
         }
 
-        div#layout {
+        div.layout {
             font-family: sans-serif;
             text-align: center;
             width: 300px;
@@ -32,6 +32,15 @@
             color: rgb(80, 230, 34);
             text-align: left;
             margin: 10px auto 15px 20px
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+            padding: 10px;
         }
 
         main {
@@ -108,28 +117,59 @@
     </style>
 </head>
 <body>
-    <div id="layout">
-        <h1>Cesar Cipher</h1>
+    <div class="row">
+    <div class="column layout">
+        <h1>Cifrul lui Cezar</h1>
         <main>
             <section id="encrypt">
-                <h2>Encrypt</h2>
-                <input type="text" name="" id="encryptMessage" placeholder="Put your text to be encrypted">
+                <h2>Criptare</h2>
+                <input type="text" name="" id="encryptMessage_cc" placeholder="Introdu textul pentru criptare">
                 <div id="key">
-                    <label for="encryptKey">Key:</label> <input type="number" name="" id="encryptKey" min="1" max="25" value="1">
+                    <label for="encryptKey_cc">Cheie:</label> 
+                    <input type="number" name="" id="encryptKey_cc" min="1" max="25" value="1">
                 </div>
-                <input type="button" name="" id="encryptButton" value="Encrypt">
-                <p id="encryptResult" class="hidden">erherh</p>
+                <input type="button" name="" id="encryptButton_cc" value="Cripteaza">
+                <p id="encryptResult_cc" class="hidden">erherh</p>
             </section>
             <section id="decrypt">
-                <h2>Decrypt</h2>
-                <input type="text" name="" id="decryptMessage" placeholder="Put your cipher to be decrypted">
+                <h2>Decriptare</h2>
+                <input type="text" name="" id="decryptMessage_cc" placeholder="Introdu textul pentru decriptare">
                 <div id="key">
-                    <label for="decryptKey">Key:</label> <input type="number" name="" id="decryptKey" min="1" max="25" value="1">
+                    <label for="decryptKey_cc">Cheie:</label> 
+                    <input type="number" name="" id="decryptKey_cc" min="1" max="25" value="1">
                 </div>
-                <input type="button" name="" id="decryptButton" value="Decrypt">
-                <p id="decryptResult" class="hidden"></p>
+                <input type="button" name="" id="decryptButton_cc" value="Decripteaza">
+                <p id="decryptResult_cc" class="hidden"></p>
             </section>
         </main>
+    </div>
+    <div class="column layout">
+        <h1>Cifrul RC4</h1>
+        
+        <main>
+            <section id="encrypt">
+                <h2>Criptare</h2>
+                <input type="text" name="" id="encryptMessage_rc" placeholder="Introdu textul pentru criptare">
+                <div id="key">
+                    <label for="encryptKey_rc">Cheie:</label> 
+                    <input type="text" name="" id="encryptKey_rc">
+                </div>
+                <input type="button" name="" id="encryptButton_rc" value="Cripteaza">
+                <p id="encryptResult_rc" class="hidden">erherh</p>
+            </section>
+            <section id="decrypt">
+                <h2>Decriptare</h2>
+                <input type="text" name="" id="decryptMessage_rc" placeholder="Introdu textul pentru decriptare">
+                <div id="key">
+                    <label for="decryptKey_rc">Cheie:</label> 
+                    <input type="text" name="" id="decryptKey_rc">
+                </div>
+                <input type="button" name="" id="decryptButton_rc" value="Decripteaza">
+                <p id="decryptResult_rc" class="hidden"></p>
+            </section>
+        </main>
+
+    </div>
     </div>
 </body>
 </html>

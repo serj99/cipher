@@ -1,33 +1,20 @@
-function alphabetLow() {
-    const alphabetLow = 'abcdefghijklmnopqrstuvwxyz'
-    let alphabetLowArray = []
+function alphabet() {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ=+-*/.,:;?!<>()[]{}#@$%^&_'
+    let alphabetArray = []
     let counter = 0
-    for (let letter of alphabetLow) {
-        alphabetLowArray[counter] = letter
+    for (let letter of alphabet) {
+        alphabetArray[counter] = letter
         counter++
     }
-    return alphabetLowArray
-}
-
-function alphabetUp() {
-    const alphabetUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    let alphabetUpArray = []
-    let counter = 0
-    for (let letter of alphabetUp) {
-        alphabetUpArray[counter] = letter
-        counter++
-    }
-    return alphabetUpArray
+    return alphabetArray
 }
 
 class Alphabet {
-    constructor(low, up) {
-        this.low = low
-        this.up = up
+    constructor(chars) {
+        this.chars = chars
     }
 }
 
-const low = alphabetLow()
-const up = alphabetUp()
+const chars = alphabet()
 
-export default new Alphabet(low, up);
+export default new Alphabet(chars);
